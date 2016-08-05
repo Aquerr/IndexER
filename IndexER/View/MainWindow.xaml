@@ -5,7 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IndexER"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="IndexER"
+        MinHeight="700" Height="700" Width="800"
+        DataContext="{Binding MainViewModel}">
     <Grid>
         <Grid.RowDefinitions>
 
@@ -15,11 +17,35 @@
 
         </Grid.RowDefinitions>
         
-        <Menu Height="20">
-            <MenuItem Header="Strona Główna"></MenuItem>
-            <MenuItem Header="Klasy"></MenuItem>
-            <MenuItem Header="Uczniowie"></MenuItem>
-            <MenuItem Header="Nauczyciele"></MenuItem>
+        <Menu Height="30">
+            <MenuItem Header="Strona Główna" Height="30" Width="100">
+                <MenuItem.Template>
+                    <ControlTemplate>
+                        <Button Content="Strona Główna"></Button>
+                    </ControlTemplate>
+                </MenuItem.Template>
+            </MenuItem>
+            <MenuItem Header="Klasy" Height="30" Width="100">
+                <MenuItem.Template>
+                    <ControlTemplate>
+                        <Button Content="Klasy"></Button>
+                    </ControlTemplate>
+                </MenuItem.Template>
+            </MenuItem>
+            <MenuItem Header="Uczniowie" Height="30" Width="100">
+                <MenuItem.Template>
+                    <ControlTemplate>
+                        <Button Content="Uczniowie"></Button>
+                    </ControlTemplate>
+                </MenuItem.Template>
+            </MenuItem>
+            <MenuItem Header="O programie" Height="30" Width="100">
+                <MenuItem.Template>
+                    <ControlTemplate>
+                        <Button Content="Nauczyciele"></Button>
+                    </ControlTemplate>
+                </MenuItem.Template>
+            </MenuItem>
         </Menu>
 
         <Grid Grid.Row="1"

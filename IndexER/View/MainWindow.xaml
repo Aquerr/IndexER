@@ -16,37 +16,73 @@
             <RowDefinition Height="Auto" />
 
         </Grid.RowDefinitions>
+
+        <Viewbox Stretch="Fill">
+            
+           
         
         <Menu Height="30">
             <MenuItem Header="Strona Główna" Height="30" Width="100">
                 <MenuItem.Template>
                     <ControlTemplate>
-                        <Button Content="Strona Główna"></Button>
+                        <Button Content="Strona Główna" ToolTip="Strona Główna!"></Button>
                     </ControlTemplate>
                 </MenuItem.Template>
             </MenuItem>
             <MenuItem Header="Klasy" Height="30" Width="100">
                 <MenuItem.Template>
                     <ControlTemplate>
-                        <Button Content="Klasy"></Button>
+                            <Button Content="Klasy" ToolTip="Spis Klas"></Button>
                     </ControlTemplate>
                 </MenuItem.Template>
             </MenuItem>
             <MenuItem Header="Uczniowie" Height="30" Width="100">
                 <MenuItem.Template>
                     <ControlTemplate>
-                        <Button Content="Uczniowie"></Button>
+                        <Button Content="Uczniowie" ToolTip="Pełna lista uczniów!"></Button>
                     </ControlTemplate>
                 </MenuItem.Template>
             </MenuItem>
-            <MenuItem Header="O programie" Height="30" Width="100">
+            <MenuItem Header="Nauczyciele" Height="30" Width="100">
                 <MenuItem.Template>
                     <ControlTemplate>
-                        <Button Content="Nauczyciele"></Button>
+                        <Button Content="Nauczyciele" ToolTip="Pełny skład nauczycieli!"></Button>
                     </ControlTemplate>
                 </MenuItem.Template>
             </MenuItem>
+            <MenuItem Header="Wydarzenia" Height="30" Width="100">
+                <MenuItem.Template>
+                    <ControlTemplate>
+                        <Button Content="Wydarzenia" ToolTip="Co w trawie piszczy!"></Button>
+                    </ControlTemplate>
+                </MenuItem.Template>
+            </MenuItem>
+            <MenuItem Height="30" Width="100">
+                <MenuItem.Template>
+                <ControlTemplate>
+                <Button Content="Plan Lekcji" ToolTip="Pełny plan lekcji!"></Button>
+                </ControlTemplate>
+                </MenuItem.Template>
+            </MenuItem>
+            <MenuItem Height="30" Width="100">
+                <MenuItem.Template>
+                    <ControlTemplate>
+                        <Button Content="Ustawienia" ToolTip="Ustawienia, od koloru do wyboru!"></Button>
+                    </ControlTemplate>
+                </MenuItem.Template>
+            </MenuItem>
+                <MenuItem Height="30" Width="100">
+                    <MenuItem.Template>
+                        <ControlTemplate>
+                            <Button Content="O Programie" ToolTip="Informacje, wersja stwórcy :)!" Click="Button_Click"></Button>
+                        </ControlTemplate>
+                    </MenuItem.Template>
+                    
+                </MenuItem>
+           
         </Menu>
+            
+        </Viewbox>
 
         <Grid Grid.Row="1"
               Background="#FFCFDDEE">

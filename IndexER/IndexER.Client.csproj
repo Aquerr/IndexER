@@ -174,7 +174,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controls\" />
-    <Folder Include="Images\" />
     <Folder Include="Themes\" />
   </ItemGroup>
   <ItemGroup>
@@ -190,6 +189,17 @@
       <Project>{4c06a118-1e5b-4b95-b0e3-e42d4493c25a}</Project>
       <Name>IndexER.Logic</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\black.jpg" />
+    <Resource Include="Images\Klasy.png" />
+    <Resource Include="Images\Nauczyciele.png" />
+    <Resource Include="Images\O programie.png" />
+    <Resource Include="Images\Plan Lekcji.png" />
+    <Resource Include="Images\Strona Główna.png" />
+    <Resource Include="Images\Uczniowie.png" />
+    <Resource Include="Images\Ustawienia.png" />
+    <Resource Include="Images\Wydarzenia.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

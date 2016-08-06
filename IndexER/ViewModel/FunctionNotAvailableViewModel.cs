@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using IndexER.Client.ViewModel;
 
-namespace IndexER.Client.View
+namespace IndexER.Client.ViewModel
 {
     public class FunctionNotAvailableViewModel : TabControlViewModelBase
     {

@@ -16,6 +16,7 @@ using System;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Ioc;
 using IndexER.Client.Service;
+using IndexER.Interfaces.ViewModels;
 using Microsoft.Practices.ServiceLocation;
 
 namespace IndexER.Client.ViewModel

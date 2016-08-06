@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace IndexER.Client.ViewModel
+namespace IndexER.Interfaces.ViewModels
 {
     public interface IAboutViewModel
     {

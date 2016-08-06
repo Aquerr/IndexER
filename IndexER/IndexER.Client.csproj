@@ -121,8 +121,6 @@
     <Compile Include="Service\ITabNavigationService.cs" />
     <Compile Include="Service\TabNavigationService.cs" />
     <Compile Include="ViewModel\AboutViewModel.cs" />
-    <Compile Include="ViewModel\IAboutViewModel.cs" />
-    <Compile Include="ViewModel\ISettingViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\SettingsViewModel.cs" />
     <Compile Include="ViewModel\TabControlViewModelBase.cs" />
@@ -178,6 +176,20 @@
     <Folder Include="Controls\" />
     <Folder Include="Images\" />
     <Folder Include="Themes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IndexER.Database\IndexER.Database.csproj">
+      <Project>{8bb6abb9-4a3a-4dd3-bf4f-7ca031ff474d}</Project>
+      <Name>IndexER.Database</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IndexER.Interfaces\IndexER.Interfaces.csproj">
+      <Project>{a4e2c982-baec-4d38-b2ad-02e4a4e3d796}</Project>
+      <Name>IndexER.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IndexER.Logic\IndexER.Logic.csproj">
+      <Project>{4c06a118-1e5b-4b95-b0e3-e42d4493c25a}</Project>
+      <Name>IndexER.Logic</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

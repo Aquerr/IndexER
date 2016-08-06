@@ -1,0 +1,28 @@
+﻿<controls:TabControlBase x:Class="IndexER.Client.View.FunctionNotAvailable"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:controls="clr-namespace:IndexER.Client.View.Controls"
+             xmlns:local="clr-namespace:IndexER.Client.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300"
+             DataContext="{Binding FunctionNotAvailable, Source={StaticResource Locator}}">
+    <Grid>
+        <DockPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            
+            <StackPanel>
+                
+                <TextBlock FontSize="40"
+                           FontWeight="Bold"
+                           TextWrapping="Wrap"
+                           Text="Ta strona nie jest dostępna!"
+                           Foreground="Red"
+                           Width="500"></TextBlock>
+                
+            </StackPanel>
+            
+        </DockPanel>
+            
+    </Grid>
+</controls:TabControlBase>

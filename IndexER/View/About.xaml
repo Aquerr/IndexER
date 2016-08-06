@@ -1,16 +1,17 @@
-﻿<Window x:Class="IndexER.Client.View.About"
+﻿<controls:TabControlBase x:Class="IndexER.Client.View.About"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IndexER.Client.View"
+        xmlns:controls="clr-namespace:IndexER.Client.View.Controls"
         mc:Ignorable="d"
-        Title="O programie" Height="416" Width="533">
-    <Grid RenderTransformOrigin="0.5,0.5">
-        <Grid.RenderTransform>
-            <TransformGroup>
-                <ScaleTransform/>
-                <SkewTransform/>
+        d:DesignHeight="300" d:DesignWidth="300"
+                         DataContext="{Binding About, Source={StaticResource Locator}}">
+    <Grid>
+        <TextBlock Text="TEEEEEEEEEEEEEEEEEEEEEEESSSSSSSSSSSSTTTTTTTTTTTTT"></TextBlock>
+    </Grid>
+</controls:TabControlBase>
                 <RotateTransform Angle="-0.0"/>
                 <TranslateTransform/>
             </TransformGroup>
@@ -19,4 +20,3 @@
         <TextBlock x:Name="aboutdevelopers" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Bottom" RenderTransformOrigin="0.719,3.125" Height="146" Width="117" FontSize="16"><Run Text="Program tworzony jest"/><LineBreak/><Run Text="przez "/><Run Text="dwóch developerów"/><LineBreak/><Run/><LineBreak/><Run Text="-"/><Run Text="Aquerr"/><LineBreak/><Run Text="-"/><Run Text="Rexi"/></TextBlock>
     </Grid>
 
-</Window>

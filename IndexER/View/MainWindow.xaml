@@ -3,11 +3,13 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:view="clr-namespace:IndexER.Client.View"
+        xmlns:controls="clr-namespace:IndexER.Client.View.Controls" 
         xmlns:local="clr-namespace:IndexER"
         mc:Ignorable="d"
         Title="IndexER"
         MinHeight="700" Height="700" Width="800"
-        DataContext="{Binding MainViewModel}">
+        DataContext="{Binding Main, Source={StaticResource Locator}}">
     <Grid>
         <Grid.RowDefinitions>
 
@@ -74,13 +76,11 @@
                 <MenuItem Height="30" Width="100">
                     <MenuItem.Template>
                         <ControlTemplate>
-                            <Button Content="O Programie" ToolTip="Informacje, wersja stwórcy :)!" Click="Button_Click"></Button>
+                            <Button Content="O Programie" ToolTip="Informacje, wersja stwórcy :)!" Command="{Binding OpenTabCommand}" CommandParameter="{x:Type view:About}"></Button>
                         </ControlTemplate>
                     </MenuItem.Template>
-                    
                 </MenuItem>
-           
-        </Menu>
+            </Menu>
             
         </Viewbox>
 
@@ -91,15 +91,8 @@
                         IsEnabled="{Binding IsLoggedIn, UpdateSourceTrigger=PropertyChanged}"
                         BorderThickness="0">
 
-                <TabControl.LayoutTransform>
-
-                    <ScaleTransform CenterX="0" CenterY="0"
-				                    ScaleX="{Binding UiScale, UpdateSourceTrigger=PropertyChanged}"
-				                    ScaleY="{Binding UiScale, UpdateSourceTrigger=PropertyChanged}"/>
-
-                </TabControl.LayoutTransform>
-
             </TabControl>
+           
 
         </Grid>
 

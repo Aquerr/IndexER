@@ -12,6 +12,7 @@
   See http://www.galasoft.ch/mvvm
 */
 
+using System;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Ioc;
 using IndexER.Client.Service;
@@ -39,6 +40,7 @@ namespace IndexER.Client.ViewModel
             }
             else
             {
+                SimpleIoc.Default.Register<IAboutViewModel, AboutViewModel>();
                 SimpleIoc.Default.Register<ITabNavigationService, TabNavigationService>();
                 // Create run time view services and models
                 //TODO:Insert here interfaces.
@@ -49,6 +51,8 @@ namespace IndexER.Client.ViewModel
         }
 
         public static ITabNavigationService TabNavigationService { get { return SimpleIoc.Default.GetInstance<ITabNavigationService>(); } }
+
+        public IAboutViewModel About {get { return SimpleIoc.Default.GetInstance<IAboutViewModel>(Guid.NewGuid().ToString()); }}
 
         public static MainViewModel Main {get { return SimpleIoc.Default.GetInstance<MainViewModel>(); } }
         

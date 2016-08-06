@@ -155,34 +155,63 @@ namespace IndexER.Client.Service
 
         private void OpenTab(CustomTabItem header, TabControlBase instance)
         {
-          //  if (!CanOpenNew(instance)) return;
-          //
-          //  if (!IsFeatureEnabled(instance.GetType()))
-          //  {
-          //      var notAvailableHeader = new CustomTabItem {Label = {Content = "Funktion ej tillgänglig"}};
-          //
-          //      var functionNotAvailable = new FunctionNotAvailable(GetFeatureName(instance.GetType()));
-          //      DispatcherHelper.CheckBeginInvokeOnUI(() =>
-          //      {
-          //          var item = new TabItem
-          //          {
-          //              Header = notAvailableHeader,
-          //              Content = functionNotAvailable
-          //          };
-          //
-          //          functionNotAvailable.TabItem = item;
-          //
-          //          notAvailableHeader.CloseButton.Click += CloseButton_Click;
-          //          functionNotAvailable.CloseRequested += instance_CloseRequested;
-          //
-          //          TabCollection.Add(item);
-          //
-          //
-          //          item.Focus();
-          //      });
+            if (!CanOpenNew(instance)) return;
+          
+            if (!IsFeatureEnabled(instance.GetType()))
+            {
+                var notAvailableHeader = new CustomTabItem {Label = {Content = "Strona niedostępna"}};
+          
+                var functionNotAvailable = new FunctionNotAvailable(GetFeatureName(instance.GetType()));
+                DispatcherHelper.CheckBeginInvokeOnUI(() =>
+                {
+                    var item = new TabItem
+                    {
+                        Header = notAvailableHeader,
+                        Content = functionNotAvailable
+                    };
+          
+                    functionNotAvailable.TabItem = item;
+          
+                    notAvailableHeader.CloseButton.Click += CloseButton_Click;
+                    functionNotAvailable.CloseRequested += instance_CloseRequested;
+          
+                    TabCollection.Add(item);
+          
+          
+                    item.Focus();
+                });
 
-          //      return;
-          //  }
+                return;
+            }
+
+            DispatcherHelper.CheckBeginInvokeOnUI(() =>
+            {
+                var item = new TabItem
+                {
+                    Header = header,
+                    Content = instance
+                };
+
+                instance.TabItem = item;
+
+                header.CloseButton.Click += CloseButton_Click;
+                instance.CloseRequested += instance_CloseRequested;
+
+                if (instance is MainWindow)
+                {
+                  //  RemoveAllSaleHandlers();
+                  //  header.CloseButton.Visibility = Visibility.Collapsed;
+                  //
+                  //  TabCollection.Insert(0, item);
+                }
+                else
+                {
+                    TabCollection.Add(item);
+                }
+
+
+                item.Focus();
+            });
         }
 
         private bool CanOpenNew(object instance)
@@ -228,7 +257,7 @@ namespace IndexER.Client.Service
             switch (featureName)
             {
                 //Standard features
-                case "MainWindow":
+           //     case "MainWindow":
                 case "About":
                     return true;
 

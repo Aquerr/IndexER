@@ -20,68 +20,116 @@
         </Grid.RowDefinitions>
 
         <Viewbox Stretch="Fill">
-            
-           
-        
-        <Menu Height="30">
-            <MenuItem Header="Strona Główna" Height="30" Width="100">
-                <MenuItem.Template>
-                    <ControlTemplate>
-                        <Button Content="Strona Główna" ToolTip="Strona Główna!"></Button>
-                    </ControlTemplate>
-                </MenuItem.Template>
-            </MenuItem>
-            <MenuItem Header="Klasy" Height="30" Width="100">
-                <MenuItem.Template>
-                    <ControlTemplate>
-                            <Button Content="Klasy" ToolTip="Spis Klas"></Button>
-                    </ControlTemplate>
-                </MenuItem.Template>
-            </MenuItem>
-            <MenuItem Header="Uczniowie" Height="30" Width="100">
-                <MenuItem.Template>
-                    <ControlTemplate>
-                        <Button Content="Uczniowie" ToolTip="Pełna lista uczniów!"></Button>
-                    </ControlTemplate>
-                </MenuItem.Template>
-            </MenuItem>
-            <MenuItem Header="Nauczyciele" Height="30" Width="100">
-                <MenuItem.Template>
-                    <ControlTemplate>
-                        <Button Content="Nauczyciele" ToolTip="Pełny skład nauczycieli!"></Button>
-                    </ControlTemplate>
-                </MenuItem.Template>
-            </MenuItem>
-            <MenuItem Header="Wydarzenia" Height="30" Width="100">
-                <MenuItem.Template>
-                    <ControlTemplate>
-                        <Button Content="Wydarzenia" ToolTip="Co w trawie piszczy!"></Button>
-                    </ControlTemplate>
-                </MenuItem.Template>
-            </MenuItem>
-            <MenuItem Height="30" Width="100">
-                <MenuItem.Template>
-                <ControlTemplate>
-                <Button Content="Plan Lekcji" ToolTip="Pełny plan lekcji!"></Button>
-                </ControlTemplate>
-                </MenuItem.Template>
-            </MenuItem>
-            <MenuItem Height="30" Width="100">
-                <MenuItem.Template>
-                    <ControlTemplate>
-                            <Button Content="Ustawienia" ToolTip="Ustawienia, od koloru do wyboru!" Command="{Binding OpenTabCommand}" CommandParameter="{x:Type view:Settings}"></Button>
-                    </ControlTemplate>
-                </MenuItem.Template>
-            </MenuItem>
+
+
+
+            <Menu Height="30">
+                <MenuItem Header="Strona Główna" Height="30" Width="100">
+                    <MenuItem.Template>
+                        <ControlTemplate>
+                            <Button ToolTip="Strona Główna!">
+                                <Button.Template>
+                                    <ControlTemplate>
+                                        <Image Source="../Images/Strona Główna.png"></Image>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+                        </ControlTemplate>
+                    </MenuItem.Template>
+                </MenuItem>
+                <MenuItem Header="Klasy" Height="30" Width="100">
+                    <MenuItem.Template>
+                        <ControlTemplate>
+                            <Button Content="Klasy" ToolTip="Spis Klas">
+                                <Button.Template>
+                                    <ControlTemplate>
+                                        <Image Source="../Images/Klasy.png"></Image>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+                        </ControlTemplate>
+                    </MenuItem.Template>
+                </MenuItem>
+                <MenuItem Header="Uczniowie" Height="30" Width="100">
+                    <MenuItem.Template>
+                        <ControlTemplate>
+                            <Button Content="Uczniowie" ToolTip="Pełna lista uczniów!">
+                                <Button.Template>
+                                    <ControlTemplate>
+                                        <Image Source="../Images/Uczniowie.png"></Image>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+                        </ControlTemplate>
+                    </MenuItem.Template>
+                </MenuItem>
+                <MenuItem Header="Nauczyciele" Height="30" Width="100">
+                    <MenuItem.Template>
+                        <ControlTemplate>
+                            <Button Content="Nauczyciele" ToolTip="Pełny skład nauczycieli!">
+                                <Button.Template>
+                                    <ControlTemplate>
+                                        <Image Source="../Images/Nauczyciele.png"></Image>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+                        </ControlTemplate>
+                    </MenuItem.Template>
+                </MenuItem>
+                <MenuItem Header="Wydarzenia" Height="30" Width="100">
+                    <MenuItem.Template>
+                        <ControlTemplate>
+                            <Button Content="Wydarzenia" ToolTip="Co w trawie piszczy!">
+                                <Button.Template>
+                                    <ControlTemplate>
+                                        <Image Source="../Images/Wydarzenia.png"></Image>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+                        </ControlTemplate>
+                    </MenuItem.Template>
+                </MenuItem>
                 <MenuItem Height="30" Width="100">
                     <MenuItem.Template>
                         <ControlTemplate>
-                            <Button Content="O Programie" ToolTip="Informacje, wersja stwórcy :)!" Command="{Binding OpenTabCommand}" CommandParameter="{x:Type view:About}"></Button>
+                            <Button Content="Plan Lekcji" ToolTip="Pełny plan lekcji!">
+                                <Button.Template>
+                                    <ControlTemplate>
+                                        <Image Source="../Images/Plan Lekcji.png"></Image>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+                        </ControlTemplate>
+                    </MenuItem.Template>
+                </MenuItem>
+                <MenuItem Height="30" Width="100">
+                    <MenuItem.Template>
+                        <ControlTemplate>
+                            <Button Content="Ustawienia" ToolTip="Ustawienia, od koloru do wyboru!" Command="{Binding OpenTabCommand}" CommandParameter="{x:Type view:Settings}">
+                                <Button.Template>
+                                    <ControlTemplate>
+                                        <Image Source="../Images/Ustawienia.png"></Image>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+                        </ControlTemplate>
+                    </MenuItem.Template>
+                </MenuItem>
+                <MenuItem Height="30" Width="100">
+                    <MenuItem.Template>
+                        <ControlTemplate>
+                            <Button ToolTip="Informacje, wersja stwórcy :)!" Command="{Binding OpenTabCommand}" CommandParameter="{x:Type view:About}">
+                                <Button.Template>
+                                    <ControlTemplate>
+                                        <Image Source="../Images/O programie.png"></Image>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
                         </ControlTemplate>
                     </MenuItem.Template>
                 </MenuItem>
             </Menu>
-            
+
         </Viewbox>
 
         <Grid Grid.Row="1"
@@ -92,7 +140,7 @@
                         BorderThickness="0">
 
             </TabControl>
-           
+
 
         </Grid>
 

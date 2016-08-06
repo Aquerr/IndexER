@@ -14,6 +14,7 @@
 
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Ioc;
+using IndexER.Client.Service;
 using Microsoft.Practices.ServiceLocation;
 
 namespace IndexER.Client.ViewModel
@@ -38,15 +39,18 @@ namespace IndexER.Client.ViewModel
             }
             else
             {
+                SimpleIoc.Default.Register<ITabNavigationService, TabNavigationService>();
                 // Create run time view services and models
                 //TODO:Insert here interfaces.
-               // SimpleIoc.Default.Register<IDataService, DataService>();
+                // SimpleIoc.Default.Register<IDataService, DataService>();
             }
 
             SimpleIoc.Default.Register<MainViewModel>();
         }
 
-        public static MainViewModel Main {get { return ServiceLocator.Current.GetInstance<MainViewModel>();}}
+        public static ITabNavigationService TabNavigationService { get { return SimpleIoc.Default.GetInstance<ITabNavigationService>(); } }
+
+        public static MainViewModel Main {get { return SimpleIoc.Default.GetInstance<MainViewModel>(); } }
         
         public static void Cleanup()
         {

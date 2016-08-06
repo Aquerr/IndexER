@@ -1,4 +1,9 @@
+using System;
+using System.Windows;
 using GalaSoft.MvvmLight;
+using IndexER.Client.Commands;
+using IndexER.Client.Service;
+using IndexER.Client.View.Controls;
 
 namespace IndexER.Client.ViewModel
 {
@@ -14,13 +19,17 @@ namespace IndexER.Client.ViewModel
     /// See http://www.galasoft.ch/mvvm
     /// </para>
     /// </summary>
-    public class MainViewModel : ViewModelBase
+    public sealed class MainViewModel : ViewModelBase
     {
-        /// <summary>
-        /// Initializes a new instance of the MainViewModel class.
-        /// </summary>
-        public MainViewModel()
+
+        private readonly ITabNavigationService _tabNavigationService;
+
+        public MainViewModel(ITabNavigationService tabNavigationService)
         {
+            _tabNavigationService = tabNavigationService;
+
+            SetupCommands();
+
             ////if (IsInDesignMode)
             ////{
             ////    // Code runs in Blend --> create design time data.
@@ -29,6 +38,35 @@ namespace IndexER.Client.ViewModel
             ////{
             ////    // Code runs "for real"
             ////}
+        }
+
+        public RelayCommand OpenTabCommand { get; set; }
+        //    public ICommand ExitCommand { get; set; }
+
+        public bool IsLoggedIn
+        {
+            get { return true; }
+        }
+
+        public ITabNavigationService TabNavigationService
+        {
+            get { return _tabNavigationService; }
+        }
+
+        private void Exit()
+        {
+            Application.Current.Shutdown();
+        }
+
+        private void SetupCommands()
+        {
+            Func<TabControlBase> activeControl = _tabNavigationService.GetActiveTab;
+
+            //TODO: Revisit
+
+            //To make easier to read code
+
+            OpenTabCommand = new RelayCommand(_tabNavigationService.OpenTab, param => IsLoggedIn);
         }
     }
 }

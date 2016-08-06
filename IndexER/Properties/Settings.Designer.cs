@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace IndexER.Client.Properties {
+namespace IndexER.Interfaces.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

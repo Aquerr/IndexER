@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using IndexER.Client.Service;
+using IndexER.Interfaces.ViewModels;
 
 namespace IndexER.Client.ViewModel
 {

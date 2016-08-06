@@ -67,7 +67,7 @@
             <MenuItem Height="30" Width="100">
                 <MenuItem.Template>
                     <ControlTemplate>
-                        <Button Content="Ustawienia" ToolTip="Ustawienia, od koloru do wyboru!"></Button>
+                        <Button Content="Ustawienia" ToolTip="Ustawienia, od koloru do wyboru!" Click="Button_Click_1"></Button>
                     </ControlTemplate>
                 </MenuItem.Template>
             </MenuItem>

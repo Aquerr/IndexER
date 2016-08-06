@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IndexER.Client.View"
         mc:Ignorable="d"
-        Title="O programie" Height="416.5" Width="533">
+        Title="O programie" Height="416" Width="533">
     <Grid RenderTransformOrigin="0.5,0.5">
         <Grid.RenderTransform>
             <TransformGroup>

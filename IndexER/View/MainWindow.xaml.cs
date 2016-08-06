@@ -22,5 +22,13 @@ namespace IndexER.Client.View
 
             window.Show();
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Settings window = new Settings();
+
+            window.Show();
+
+        }
     }
 }

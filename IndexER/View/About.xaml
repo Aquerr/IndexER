@@ -5,6 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IndexER.Client.View"
         mc:Ignorable="d"
-        Title="O programie" Height="300" Width="300">
-    <Grid/>
+        Title="O programie" Height="416.5" Width="533">
+    <Grid RenderTransformOrigin="0.5,0.5">
+        <Grid.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform/>
+                <SkewTransform/>
+                <RotateTransform Angle="-0.0"/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </Grid.RenderTransform>
+        <TextBox x:Name="textabout" HorizontalAlignment="Left" Height="167" Margin="367,0,0,0" TextWrapping="Wrap" Text="IndexER - To program, który pełni funkcję elektronicznego dziennika informacyjnego dla nauczyczycieli jak i uczniów. Strona, na którą loguje się uczeń zawiera tylko dostęp do niektórych informacji, natomiast strona nauczyciela ma nielimitowane możliwości (edytowanie ocen / planów lekcji / informacji o uczniach)" VerticalAlignment="Top" Width="158" FontSize="11" TextDecorations="{x:Null}"/>
+        <TextBlock x:Name="aboutdevelopers" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Bottom" RenderTransformOrigin="0.719,3.125" Height="146" Width="117" FontSize="16"><Run Text="Program tworzony jest"/><LineBreak/><Run Text="przez "/><Run Text="dwóch developerów"/><LineBreak/><Run/><LineBreak/><Run Text="-"/><Run Text="Aquerr"/><LineBreak/><Run Text="-"/><Run Text="Rexi"/></TextBlock>
+    </Grid>
+
 </Window>

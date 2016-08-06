@@ -1,11 +1,12 @@
-﻿<Window x:Class="IndexER.Client.View.Settings"
+﻿<controls:TabControlBase x:Class="IndexER.Client.View.Settings"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IndexER.Client.View"
+        xmlns:controls="clr-namespace:IndexER.Client.View.Controls"
         mc:Ignorable="d"
-        Title="Ustawienia" Height="416" Width="533">
+        Height="416" Width="533">
     <Grid>
         
         <Grid.RowDefinitions>            
@@ -21,4 +22,4 @@
         
     </Grid>
     
-</Window>
+</controls:TabControlBase>

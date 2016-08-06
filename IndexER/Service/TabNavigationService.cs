@@ -259,6 +259,7 @@ namespace IndexER.Client.Service
                 //Standard features
            //     case "MainWindow":
                 case "About":
+                case "Settings":
                     return true;
 
                 default:

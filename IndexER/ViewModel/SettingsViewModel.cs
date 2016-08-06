@@ -1,15 +1,15 @@
-﻿using System;
+﻿using IndexER.Client.Service;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using IndexER.Client.Service;
 
 namespace IndexER.Client.ViewModel
 {
-    public class AboutViewModel : TabControlViewModelBase, IAboutViewModel
+    class SettingsViewModel : TabControlViewModelBase, ISettingViewModel
     {
-        public AboutViewModel(ITabNavigationService tabNavigationService)
+        public SettingsViewModel(ITabNavigationService tabNavigationService)
         {
             _tabNavigationService = tabNavigationService;
         }
@@ -17,7 +17,7 @@ namespace IndexER.Client.ViewModel
         private bool _refreshing;
         private readonly ITabNavigationService _tabNavigationService;
 
-        public override string TabTitle { get { return "O programie"; } }
+        public override string TabTitle { get { return "Ustawienia"; } }
         public override bool AllowMultipleTabs { get { return false; } }
 
         public bool PanelLoading { get { return _refreshing; } }
@@ -39,11 +39,11 @@ namespace IndexER.Client.ViewModel
         {
             try
             {
-               // await LoadAsync();
+                // await LoadAsync();
             }
             finally
             {
-               // Refreshing = false;
+                // Refreshing = false;
             }
         }
 
@@ -54,8 +54,7 @@ namespace IndexER.Client.ViewModel
 
         public async Task LoadAsync()
         {
-            
+
         }
     }
-
 }

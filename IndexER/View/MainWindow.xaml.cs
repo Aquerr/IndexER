@@ -15,20 +15,5 @@ namespace IndexER.Client.View
         {
             InitializeComponent();
         }
-
-      // private void Button_Click(object sender, RoutedEventArgs e)
-      // {
-      //   //  About window = new About();
-      //
-      //    // window.Show();
-      // }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            Settings window = new Settings();
-
-            window.Show();
-
-        }
     }
 }

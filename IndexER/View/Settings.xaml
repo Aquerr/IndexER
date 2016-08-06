@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:IndexER.Client.View"
         xmlns:controls="clr-namespace:IndexER.Client.View.Controls"
         mc:Ignorable="d"
-        Height="416" Width="533">
+        Height="416" Width="533"
+                         DataContext="{Binding Settings, Source={StaticResource Locator} }">
     <Grid>
         
         <Grid.RowDefinitions>            

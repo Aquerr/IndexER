@@ -1,6 +1,10 @@
-﻿namespace IndexER.Client.ViewModel
+﻿using System.Threading.Tasks;
+
+namespace IndexER.Client.ViewModel
 {
-    internal interface ISettingViewModel
+    public interface ISettingViewModel
     {
+        bool Refreshing { get; }
+        Task LoadAsync();
     }
 }

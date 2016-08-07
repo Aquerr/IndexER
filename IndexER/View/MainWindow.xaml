@@ -12,7 +12,7 @@
         DataContext="{Binding Main, Source={StaticResource Locator}}">
     
     <Window.Resources>
-        <Style TargetType="{x:Type Button}">
+        <Style x:Key="MenuButtonStyle" TargetType="Button">
             <Setter Property="Width" Value="NaN"/>
             <Setter Property="MinWidth" Value="0"/>
             <Setter Property="Height" Value="NaN"/>
@@ -141,64 +141,56 @@
                 <MenuItem Header="Strona Główna" Height="30" Width="100">
                     <MenuItem.Template>
                         <ControlTemplate>
-                            <Button ToolTip="Strona Główna!" Content="Strona Główna!">
-                            </Button>
+                            <Button ToolTip="Strona Główna!" Content="Strona Główna!" Style="{StaticResource MenuButtonStyle}"/>
                         </ControlTemplate>
                     </MenuItem.Template>
                 </MenuItem>
                 <MenuItem Header="Klasy" Height="30" Width="100">
                     <MenuItem.Template>
                         <ControlTemplate>
-                            <Button Content="Klasy" ToolTip="Spis Klas">
-                            </Button>
+                            <Button Content="Klasy" ToolTip="Spis Klas" Style="{StaticResource MenuButtonStyle}"/>
                         </ControlTemplate>
                     </MenuItem.Template>
                 </MenuItem>
                 <MenuItem Header="Uczniowie" Height="30" Width="100">
                     <MenuItem.Template>
                         <ControlTemplate>
-                            <Button Content="Uczniowie" ToolTip="Pełna lista uczniów!">
-                            </Button>
+                            <Button Content="Uczniowie" ToolTip="Pełna lista uczniów!" Style="{StaticResource MenuButtonStyle}"/>
                         </ControlTemplate>
                     </MenuItem.Template>
                 </MenuItem>
                 <MenuItem Header="Nauczyciele" Height="30" Width="100">
                     <MenuItem.Template>
                         <ControlTemplate>
-                            <Button Content="Nauczyciele" ToolTip="Pełny skład nauczycieli!">
-                            </Button>
+                            <Button Content="Nauczyciele" ToolTip="Pełny skład nauczycieli!" Style="{StaticResource MenuButtonStyle}"/>
                         </ControlTemplate>
                     </MenuItem.Template>
                 </MenuItem>
                 <MenuItem Header="Wydarzenia" Height="30" Width="100">
                     <MenuItem.Template>
                         <ControlTemplate>
-                            <Button Content="Wydarzenia" ToolTip="Co w trawie piszczy!">
-                            </Button>
+                            <Button Content="Wydarzenia" ToolTip="Co w trawie piszczy!" Style="{StaticResource MenuButtonStyle}"/>
                         </ControlTemplate>
                     </MenuItem.Template>
                 </MenuItem>
                 <MenuItem Height="30" Width="100">
                     <MenuItem.Template>
                         <ControlTemplate>
-                            <Button Content="Plan Lekcji" ToolTip="Pełny plan lekcji!">
-                            </Button>
+                            <Button Content="Plan Lekcji" ToolTip="Pełny plan lekcji!" Style="{StaticResource MenuButtonStyle}"/>
                         </ControlTemplate>
                     </MenuItem.Template>
                 </MenuItem>
                 <MenuItem Height="30" Width="100">
                     <MenuItem.Template>
                         <ControlTemplate>
-                            <Button Content="Ustawienia" ToolTip="Ustawienia, od koloru do wyboru!" Command="{Binding OpenTabCommand}" CommandParameter="{x:Type view:Settings}">
-                            </Button>
+                            <Button Content="Ustawienia" ToolTip="Ustawienia, od koloru do wyboru!" Command="{Binding OpenTabCommand}" CommandParameter="{x:Type view:Settings}" Style="{StaticResource MenuButtonStyle}"/>
                         </ControlTemplate>
                     </MenuItem.Template>
                 </MenuItem>
                 <MenuItem Height="30" Width="100">
                     <MenuItem.Template>
                         <ControlTemplate>
-                            <Button ToolTip="Informacje, wersja stwórcy :)!" Content="O Programie" Command="{Binding OpenTabCommand}" CommandParameter="{x:Type view:About}">
-                            </Button>
+                            <Button ToolTip="Informacje, wersja stwórcy :)!" Content="O Programie" Command="{Binding OpenTabCommand}" CommandParameter="{x:Type view:About}" Style="{StaticResource MenuButtonStyle}"/>
                         </ControlTemplate>
                     </MenuItem.Template>
                 </MenuItem>

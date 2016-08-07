@@ -49,6 +49,12 @@
     <Folder Include="Logic\" />
     <Folder Include="Service\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IndexER.Logic\IndexER.Logic.csproj">
+      <Project>{4c06a118-1e5b-4b95-b0e3-e42d4493c25a}</Project>
+      <Name>IndexER.Logic</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

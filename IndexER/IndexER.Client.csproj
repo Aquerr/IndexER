@@ -201,6 +201,18 @@
     <Resource Include="Images\Ustawienia.png" />
     <Resource Include="Images\Wydarzenia.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Klasy_active.png" />
+    <Resource Include="Images\Nauczyciele_active.png" />
+    <Resource Include="Images\O programie_active.png" />
+    <Resource Include="Images\Plan Lekcji_active.png" />
+    <Resource Include="Images\Strona Główna_active.png" />
+    <Resource Include="Images\Uczniowie_active.png" />
+    <Resource Include="Images\Ustawienia_active.png" />
+    <Resource Include="Images\Wydarzenia_active.png" />
+    <Resource Include="Images\X.png" />
+    <Resource Include="Images\Xactive.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -41,6 +41,7 @@ namespace IndexER.Client.ViewModel
             }
             else
             {
+                SimpleIoc.Default.Register<IClassMenuViewModel, ClassMenuViewModel>();
                 SimpleIoc.Default.Register<ISettingViewModel, SettingsViewModel>();
                 SimpleIoc.Default.Register<IAboutViewModel, AboutViewModel>();
                 SimpleIoc.Default.Register<ITabNavigationService, TabNavigationService>();
@@ -54,6 +55,7 @@ namespace IndexER.Client.ViewModel
 
         public static ITabNavigationService TabNavigationService { get { return SimpleIoc.Default.GetInstance<ITabNavigationService>(); } }
 
+        public IClassMenuViewModel ClassMenu { get {return SimpleIoc.Default.GetInstance<IClassMenuViewModel>(Guid.NewGuid().ToString());} }
         public IAboutViewModel About {get { return SimpleIoc.Default.GetInstance<IAboutViewModel>(Guid.NewGuid().ToString()); }}
         public ISettingViewModel Settings {get { return SimpleIoc.Default.GetInstance<ISettingViewModel>(Guid.NewGuid().ToString()); } }
         public static MainViewModel Main {get { return SimpleIoc.Default.GetInstance<MainViewModel>(); } }

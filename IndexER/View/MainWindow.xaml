@@ -5,7 +5,6 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:view="clr-namespace:IndexER.Client.View"
         xmlns:controls="clr-namespace:IndexER.Client.View.Controls" 
-        xmlns:local="clr-namespace:IndexER"
         mc:Ignorable="d"
         Title="IndexER"
         MinHeight="700" Height="700" Width="800"
@@ -148,7 +147,7 @@
                 <MenuItem Header="Klasy" Height="30" Width="100">
                     <MenuItem.Template>
                         <ControlTemplate>
-                            <Button Content="Klasy" ToolTip="Spis Klas" Style="{StaticResource MenuButtonStyle}"/>
+                            <Button Content="Klasy" ToolTip="Spis Klas" Style="{StaticResource MenuButtonStyle}" Command="{Binding OpenTabCommand}" CommandParameter="{x:Type view:ClassMenu}"/>
                         </ControlTemplate>
                     </MenuItem.Template>
                 </MenuItem>

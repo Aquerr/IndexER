@@ -260,6 +260,7 @@ namespace IndexER.Client.Service
            //     case "MainWindow":
                 case "About":
                 case "Settings":
+                case "ClassMenu":
                     return true;
 
                 default:

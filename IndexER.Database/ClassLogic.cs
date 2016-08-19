@@ -15,12 +15,12 @@ namespace IndexER.Database
         //TODO:Refactor this file.
 
         private readonly IDatabaseHelper _databaseHelper;
-        private readonly DataContext _dataContext;
+   //     private readonly DataContext _dataContext;
 
         public ClassLogic()
         {
           _databaseHelper = new DatabaseHelper();
-           _dataContext = new DataContext(_databaseHelper.GetConnectionString());   
+      //     _dataContext = new DataContext(_databaseHelper.GetConnectionString());   
         }
 
         public async Task<List<Class>> GetClassesAsync()

@@ -46,7 +46,8 @@
                Content="Label"
                Grid.Column="0"
                IsTabStop="False"
-               Margin="0 0 5 0"/>
+               Margin="0 0 5 0"
+               FontWeight="Bold"/>
 
         <Button IsTabStop="False" 
                 Name="CloseButton"

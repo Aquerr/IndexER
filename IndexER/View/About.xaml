@@ -9,7 +9,7 @@
         d:DesignHeight="300" d:DesignWidth="300"
         DataContext="{Binding About, Source={StaticResource Locator}}">
     <Grid>
-        <TextBlock x:Name="textabout" HorizontalAlignment="Right" VerticalAlignment="Top" Height="167" TextWrapping="Wrap" Text="IndexER - To program, który pełni funkcję elektronicznego dziennika informacyjnego dla nauczyczycieli jak i uczniów. Strona, na którą loguje się uczeń zawiera tylko dostęp do niektórych informacji, natomiast strona nauczyciela ma nielimitowane możliwości (edytowanie ocen / planów lekcji / informacji o uczniach)"  Width="158" FontSize="11" TextDecorations="{x:Null}"/>
+        <TextBlock x:Name="textabout" HorizontalAlignment="Left" VerticalAlignment="Top" Height="167" TextWrapping="Wrap" Text="IndexER - To program, który pełni funkcję elektronicznego dziennika informacyjnego dla nauczyczycieli jak i uczniów. Strona, na którą loguje się uczeń zawiera tylko dostęp do niektórych informacji, natomiast strona nauczyciela ma nielimitowane możliwości (edytowanie ocen / planów lekcji / informacji o uczniach)"  Width="158" FontSize="11" TextDecorations="{x:Null}"/>
         <TextBlock x:Name="aboutdevelopers" HorizontalAlignment="Left" VerticalAlignment="Bottom" Text="IndexER jest w fazie ALPHA ~ tworzony przez dwóch developerów - Aquerr , Rexi"/>
     </Grid>
 </controls:TabControlBase>
